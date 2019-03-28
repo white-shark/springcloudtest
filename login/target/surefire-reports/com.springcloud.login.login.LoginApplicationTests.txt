@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.springcloud.login.login.LoginApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 18.246 s <<< FAILURE! - in com.springcloud.login.login.LoginApplicationTests
+contextLoads(com.springcloud.login.login.LoginApplicationTests)  Time elapsed: 0.014 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/session/data/redis/config/annotation/web/http/RedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR unknown command `CONFIG`, with args beginning with: `GET`, `notify-keyspace-events`, 
+Caused by: org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: ERR unknown command `CONFIG`, with args beginning with: `GET`, `notify-keyspace-events`, 
+Caused by: io.lettuce.core.RedisCommandExecutionException: ERR unknown command `CONFIG`, with args beginning with: `GET`, `notify-keyspace-events`, 
+
